@@ -17,7 +17,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="#">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
@@ -27,6 +27,12 @@
     <a class="navbar-brand" href="#">
 		<img src="images/logoBlack.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
 	</a>
+	<a href="cart.html" class="btn position-relative ms-3">
+  🛒
+  <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    0
+  </span>
+</a>
   </div>
 </nav>
 
@@ -62,16 +68,28 @@
     <div class="col-6 col-md-3">
       <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height:200px;">
         [IMG 1]
+		<button class="btn btn-primary btn-sm mt-2 add-to-cart" 
+      data-id="1" data-name="Book Title 1" data-price="14.99">
+      Add to Cart
+    </button>
       </div>
     </div>
     <div class="col-6 col-md-3">
       <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height:200px;">
         [IMG 2]
+		<button class="btn btn-primary btn-sm mt-2 add-to-cart" 
+      data-id="2" data-name="Book Title 2" data-price="12.99">
+      Add to Cart
+    </button>
       </div>
     </div>
     <div class="col-6 col-md-3">
       <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height:200px;">
         [IMG 3]
+		<button class="btn btn-primary btn-sm mt-2 add-to-cart" 
+      data-id="3" data-name="Book Title 3" data-price="11.99">
+      Add to Cart
+    </button>
       </div>
     </div>
     <div class="col-6 col-md-3">
@@ -148,5 +166,39 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cartCount = document.getElementById("cart-count");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart count on page load
+  updateCartCount();
+
+  // Handle Add to Cart
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.getAttribute("data-id");
+      const name = button.getAttribute("data-name");
+      const price = parseFloat(button.getAttribute("data-price"));
+
+      const itemIndex = cart.findIndex(item => item.id === id);
+      if (itemIndex > -1) {
+        cart[itemIndex].quantity += 1;
+      } else {
+        cart.push({ id, name, price, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+    });
+  });
+
+  function updateCartCount() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+  }
+});
+</script>
+
 </body>
 </html>
