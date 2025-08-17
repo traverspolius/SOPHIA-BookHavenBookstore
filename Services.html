@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .service-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 40px 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">COMPANY LOGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <a class="navbar-brand" href="#">
+        <img src="images/logoBlack.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      </a>
+      <a href="cart.html" class="btn position-relative ms-3">
+        🛒
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+  </div>
+</nav>
+
+<!-- HEADER SECTION -->
+<div class="text-center py-5">
+  <h2>Our Services</h2>
+  <p class="text-muted">Service description</p>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="container">
+  <div class="row">
+    <!-- Repeat for 6 services -->
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 1</h5>
+        <p class="text-muted">Short description for service 1.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 2</h5>
+        <p class="text-muted">Short description for service 2.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 3</h5>
+        <p class="text-muted">Short description for service 3.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 4</h5>
+        <p class="text-muted">Short description for service 4.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 5</h5>
+        <p class="text-muted">Short description for service 5.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <div class="mb-3 bg-light" style="height: 100px;"></div>
+        <h5>Service 6</h5>
+        <p class="text-muted">Short description for service 6.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA SECTION -->
+<div class="bg-light text-center py-5 mt-4">
+  <h4>Ready to get started?</h4>
+  <p class="text-muted">Contact us description</p>
+  <a href="#" class="btn btn-primary mx-2">GET QUOTE</a>
+  <a href="#" class="btn btn-outline-secondary mx-2">CONTACT US</a>
+</div>
+
+<!-- TESTIMONIAL SECTION -->
+<div class="container text-center py-5">
+  <h5 class="mb-4">What Our Clients Say</h5>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <p>"Client testimonial goes here."</p>
+        <small class="text-muted">— Client Name</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <p>"Client testimonial goes here."</p>
+        <small class="text-muted">— Client Name</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <p>"Client testimonial goes here."</p>
+        <small class="text-muted">— Client Name</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-dark text-white">
+  <div class="container text-center">
+    <div class="row mb-3">
+      <div class="col-md-4">Footer Column 1</div>
+      <div class="col-md-4">Footer Column 2</div>
+      <div class="col-md-4">Footer Column 3</div>
+    </div>
+    <small>© 2025 Book Haven Bookstore. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cartCount = document.getElementById("cart-count");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart count on page load
+  updateCartCount();
+
+  function updateCartCount() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+  }
+});
+</script>
+</body>
+</html>
