@@ -1,0 +1,33 @@
+  html, body {
+        height: 100%; /* Ensure html and body take full height */
+        margin: 0;
+        padding: 0;
+    }
+  body {
+		display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure body takes at least full viewport height */
+		background-color: #FFF7EEE;
+    }
+	nav {
+		background-color: #2E4057;
+	}
+	main {
+        flex-grow: 1; /* Allows main content to expand and push footer down */
+    }
+    .service-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #2E4057;
+    }
